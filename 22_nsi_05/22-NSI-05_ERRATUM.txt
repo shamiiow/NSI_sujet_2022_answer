@@ -1,0 +1,2 @@
+﻿sujet 2022_05, exo1 : RechercheMinMax dans l'énoncé, rechercheMinMax dans les tests
+sujet 2022_05, exo2 : La carte à la position 20 de la liste est un 8 de coeur et non un 6 de coeur

@@ -1,0 +1,11 @@
+﻿sujet 2022_01, exo2 : le test doit se faire sur rendu_glouton (et non rendu_glouton_r)
+-----------------------------------------------------------------------------------------
+sujet 2022_05, exo1 : RechercheMinMax dans l'énoncé, rechercheMinMax dans les tests
+sujet 2022_05, exo2 : La carte à la position 20 de la liste est un 8 de coeur et non un 6 de coeur
+-----------------------------------------------------------------------------------------	
+sujet 2022_27, exo 2 : dans le résultat 12 doit être avant 18
+-----------------------------------------------------------------------------------------	
+sujet 2022_34, exo 2 : le dernier résultat proposé dans le test est faux
+[[0, 0, 1, 1, 0], [0, 1, 1, 1, 0], [1, 1, 1, 0, 0], [1, 0, 0, 1, 1]]
+-----------------------------------------------------------------------------------------
+sujet 2022_40, exo2 : pas de test donné... -> moyenne 14.5 (232.5/16) chez Dupont
