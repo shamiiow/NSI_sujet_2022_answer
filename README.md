@@ -1,5 +1,5 @@
-Voici l'une des correction possible aux sujet de bac oral de NSI
-Le barème (les étoiles) sont juste a titre indicatif
+Voici une correction du sujet de bac oral de NSI (fait par un élève)
+**Le barème a été établie par ["DUREL François, Lycée Jules Verne, Limours"]**
 
 [v] : 01     [v] : 11     [v] : 21     [v] : 31
 
