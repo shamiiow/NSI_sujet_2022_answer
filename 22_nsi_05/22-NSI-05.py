@@ -15,7 +15,7 @@ assert resultat == {'min': -2, 'max': 9}
 
 
 
-'''class Carte:
+class Carte:
     """Initialise Couleur (entre 1 à 4), et Valeur (entre 1 à 13)"""
     def __init__(self, c, v):
         self.Couleur = c
@@ -50,4 +50,3 @@ class PaquetDeCarte:
     """Renvoie la Carte qui se trouve à la position donnée"""
     def getCarteAt(self, pos):
         #A compléter
-'''

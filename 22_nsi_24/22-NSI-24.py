@@ -9,12 +9,7 @@ assert maxliste([98, 12, 104, 23, 131, 9]) == 131
 assert maxliste([-27, 24, -3, 15]) == 24
 
 
-
-
-
-
-
-'''class Pile:
+class Pile:
     """ Classe définissant une pile """
     def __init__(self, valeurs=[]):
         self.valeurs = valeurs
@@ -37,16 +32,15 @@ def parenthesage (ch):
     """Renvoie True si la chaîne ch est bien parenthésée et False sinon"""
     p = Pile()
     for c in ch:
-        if c == ...:
+        if c == '(':
             p.empiler(c)
-        elif c == ...:
+        elif c == ')':
             if p.est_vide():
-                return ...
+                return False
             else:
-                ...
+                p.depiler()
     return p.est_vide()
 
 assert parenthesage("((()())(()))") == True
 assert parenthesage("())(()") == False
 assert parenthesage("(())(()") == False
-'''

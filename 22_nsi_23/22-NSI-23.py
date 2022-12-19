@@ -4,25 +4,14 @@ def max_dico(dico):
     for i in dico.keys():
         if dico[i] > like:
             like = dico[i]
-    return (pseudo, like)
+            pseudo = i
+    return pseudo, like
 
 assert max_dico({'Bob': 102, 'Ada': 201, 'Alice': 103, 'Tim': 50}) == ('Ada', 201)
 assert max_dico({'Alan': 222, 'Ada': 201, 'Eve': 220, 'Tim': 50}) == ('Alan', 222)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-'''class Pile:
+class Pile:
     """Classe définissant une structure de pile."""
     def __init__(self):
         self.contenu = []
@@ -46,14 +35,15 @@ assert max_dico({'Alan': 222, 'Ada': 201, 'Eve': 220, 'Tim': 50}) == ('Alan', 22
 
 def eval_expression(tab):
     p = Pile()
-    for ... in tab:
-        if element != '+' ... element != '*':
-            p.empiler(...)
+    for element in tab:
+        if element != '+' and element != '*':
+            p.empiler(element)
         else:
-            if element == ...:
-                resultat = p.depiler() + ...
+            if element == '+':
+                resultat = p.depiler() + p.depiler()
             else:
-                resultat = ...
-            p.empiler(...)
-    return ...
-'''
+                resultat = p.depiler() * p.depiler()
+            p.empiler(resultat)
+    return resultat
+
+assert eval_expression([2, 3, '+', 5, '*']) == 25
