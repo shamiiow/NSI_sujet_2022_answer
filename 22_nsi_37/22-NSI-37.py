@@ -1,24 +1,39 @@
+def verifie(list):
+    for i in range(1, len(list)):
+        if list[i] < list[i-1]:
+            return False
+    return True
+
+assert verifie([0, 5, 8, 8, 9]) == True
+assert verifie([8, 12, 4]) == False
+assert verifie([-1, 4]) == True
+assert verifie([5]) == True
+
+
 urne = ['Oreilles sales', 'Oreilles sales', 'Oreilles sales',
       'Extra Vomit', 'Lady Baba', 'Extra Vomit', 'Lady Baba',
       'Extra Vomit', 'Lady Baba', 'Extra Vomit']
 
 def depouille(urne):
-    resultat = ...
+    resultat = {}
     for bulletin in urne:
-        if ...:
+        if bulletin in resultat.keys():
             resultat[bulletin] = resultat[bulletin] + 1
         else:
-            ...
+            resultat[bulletin] = 1
     return resultat
+
+# la variable 'vainqueur' est inutile ?
 
 def vainqueur(election):
     vainqueur = ''
     nmax = 0
     for candidat in election:
-        if ... > ... :
-            nmax = ...
+        if election[candidat] > nmax:
+            nmax = election[candidat]
             vainqueur = candidat
-    liste_finale = [nom for nom in election if election[nom] == ...]
-    return ...
+    liste_finale = [nom for nom in election if election[nom] == nmax]
+    return liste_finale
 
-
+election = depouille(urne)
+assert vainqueur(election) == ['Extra Vomit']

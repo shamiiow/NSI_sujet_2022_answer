@@ -1,14 +1,22 @@
-coeur = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], \
-         [0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0], \
-         [0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0], \
-         [0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0], \
-         [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0], \
-         [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0], \
-         [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0], \
-         [0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0], \
-         [0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0], \
-         [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0], \
-         [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0], \
+def moyenne(tab):
+    m = 0
+    for i in range(len(tab)):
+        m += tab[i]
+    return m / len(tab)
+
+assert moyenne([10,20,30,40,60,110]) == 45.0
+
+coeur = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+         [0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0], 
+         [0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0],
+         [0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0],
+         [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0], 
+         [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0], 
+         [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0], 
+         [0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0], 
+         [0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0], 
+         [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0], 
+         [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0], 
          [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
 
 def affiche(dessin):
@@ -26,10 +34,10 @@ def affiche(dessin):
 def zoomListe(liste_depart,k):
     '''renvoie une liste contenant k fois chaque 
        element de liste_depart'''
-    liste_zoom = ...
-    for elt in ... :
+    liste_zoom = []
+    for elt in liste_depart:
         for i in range(k):
-            ...
+            liste_zoom.append(elt)
     return liste_zoom
 
 def zoomDessin(grille,k):
@@ -37,7 +45,10 @@ def zoomDessin(grille,k):
        ET repetees k fois'''
     grille_zoom=[]
     for elt in grille:
-        liste_zoom = ...
+        liste_zoom = zoomListe(elt,k)
         for i in range(k):
-            ... .append(...)
+            grille_zoom.append(liste_zoom)
     return grille_zoom
+
+affiche(coeur)
+affiche(zoomDessin(coeur, 4))
