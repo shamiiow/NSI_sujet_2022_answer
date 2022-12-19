@@ -1,4 +1,19 @@
-class Noeud:
+def nombre_de_mots(phrase):
+    nb_mot = 0
+    for i in range(len(phrase)):
+        if phrase[i] == ' ':
+            nb_mot += 1
+    return nb_mot
+
+assert nombre_de_mots('Le point d exclamation est separe !') == 6
+assert nombre_de_mots('Il y a un seul espace entre les mots !') == 9
+
+
+
+
+
+
+"""class Noeud:
     '''
     Classe implémentant un noeud d'arbre binaire 
     disposant de 3 attributs :
@@ -63,3 +78,4 @@ class ABR:
                 return ...
             else:
                 return ...
+"""

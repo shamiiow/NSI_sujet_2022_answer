@@ -1,4 +1,20 @@
-class Pile:
+def maxliste(list):
+    max = list[0]
+    for i in range(len(list)):
+        if list[i] > max:
+            max = list[i]
+    return max
+
+assert maxliste([98, 12, 104, 23, 131, 9]) == 131
+assert maxliste([-27, 24, -3, 15]) == 24
+
+
+
+
+
+
+
+'''class Pile:
     """ Classe définissant une pile """
     def __init__(self, valeurs=[]):
         self.valeurs = valeurs
@@ -33,3 +49,4 @@ def parenthesage (ch):
 assert parenthesage("((()())(()))") == True
 assert parenthesage("())(()") == False
 assert parenthesage("(())(()") == False
+'''
