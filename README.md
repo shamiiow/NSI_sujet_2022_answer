@@ -9,7 +9,7 @@ Voici une correction du sujet de bac oral de NSI (fait par un élève)
 
 [v] : 04     [v] : 14     [v] : 24     [v] : 34
 
-[1] : 05     [v] : 15     [v] : 25     [v] : 35
+[v] : 05     [v] : 15     [v] : 25     [v] : 35
 
 [v] : 06     [v] : 16     [v] : 26     [v] : 36
 
