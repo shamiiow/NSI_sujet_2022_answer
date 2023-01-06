@@ -21,7 +21,7 @@ class Carte:
         self.Couleur = c
         self.Valeur = v
 
-    """Renvoie le nom de la Carte As, 2, ... 10, 
+    """Renvoie le nom de la Carte As, 2, ... 10,
        Valet, Dame, Roi"""
     def getNom(self):
         if ( self.Valeur > 1 and self.Valeur < 11):
@@ -45,8 +45,15 @@ class PaquetDeCarte:
 
     """Remplit le paquet de cartes"""
     def remplir(self):
-	#A compléter
+        for i in range(1,14):
+            for j in range(1,5):
+                self.contenu.append(Carte(j,i))
 
     """Renvoie la Carte qui se trouve à la position donnée"""
     def getCarteAt(self, pos):
-        #A compléter
+        return self.contenu[pos]
+
+unPaquet = PaquetDeCarte()
+unPaquet.remplir()
+uneCarte = unPaquet.getCarteAt(20)
+print(uneCarte.getNom() + " de " + uneCarte.getCouleur())
