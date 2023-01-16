@@ -1,5 +1,5 @@
 def renverse(mot):
-    return "".join([mot[-i] for i in range(1, len(mot)+1)])
+    return "".join(mot[::-1])
 
 assert renverse("informatique") == "euqitamrofni"
 
